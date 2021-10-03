@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+  
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tinkercad IoT Simulation</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>      
+    <body >
+          
+<div class="hero">
+
+<nav>
+<img src="arduinopi2_wG9VQWMIgG.png" class="logo">
+<input type="checkbox" id="click">
+<label for="click" class="menu-btn">
+<i class="fa fa-bars"></i>
+</label>
+<ul>
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="About/index.html">About</a></li>
+<li><a href="Contact-Form/index.html">Contact</a></li>
+<li><a href="Portfolio/2115_marvel/index.html">Portfolio</a></li>
+</ul>
+</nav>
+
+
+<audio id="audio" src="Welcome.mp3" loop="loop"></audio>
+
+
+
+
+<h1>The Home <br>Automation</h1>
+<p>Welcome to the system of automization.<br> Control your Electrical Appliances by just click through.</p>
+<a href="About/index.html" target="_parent"><button type="button">Know More</button></a>
+
+	
+
+<audio id="audio">
+		<source src="audio_34eaa33770.mp3" type="audio/mp3">
+	</audio>
+     <div class="play-sound-btn">
+	<button id="playPauseBTN" onclick="playPause()">Listen ►</button>
+
+</div>
+
+
+
+
+
+<div class="indicator">
+<span></span>
+<span></span>
+<span class="active"></span>
+</div>
+
+
+<div class="cta">
+<h1 class="cont">Choose your devices</h1>
+<a href="Light\index.html" target="_parent"><button type="button" id="dev" class="butt">Light &#x27F6</button></a><br>
+<a href="Fan\index.html" target="_parent"><button type="button" id="dev" class="butt">Fan &#x27F6</button></a><br>
+<a href="Pannel\index.html" target="_parent"><button type="button" id="dev" class="butt">Pannel &#x27F6</button></a><br>
+<br>
+<br>
+<br>
+<p> You can explore more about this system. Find out the System Analytics</p>
+<button type="button">View Analytics</button>
+</div>
+
+
+
+</div>
+
+
+
+
+<footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>portfolio</h4>
+  	 			<ul>
+  	 				<li><a href="Portfolio/2115_marvel/index.html#about">about me</a></li>
+  	 				<li><a href="Portfolio/2115_marvel/index.html#resume">my services</a></li>
+  	 				<li><a href="Portfolio/2115_marvel/index.html#contact">privacy policy</a></li>
+  	 				<li><a href="Portfolio/2115_marvel/index.html#project">freelancing</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><a href="https://tinkercad.zendesk.com/hc/en-us/categories/200357447-FAQ">FAQ</a></li>
+  	 				<li><a href="https://www.tinkercad.com/users/kVVyw6mgAjX-help">help</a></li>
+  	 				<li><a href="https://circuitdigest.com/">tutorials</a></li>
+  	 				<li><a href="https://www.codementor.io/@dewetvanthomas/tutorial-arduino-programming-in-c-12b7cztyui">Programming</a></li>
+  	 
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>online shop</h4>
+  	 			<ul>
+  	 				<li><a href="https://www.arduino.cc/">arduino</a></li>
+  	 				<li><a href="https://www.raspberrypi.org/">raspberry</a></li>
+  	 				<li><a href="https://www.adafruit.com/">adafruit</a></li>
+  	 				<li><a href="https://www.sparkfun.com/">sparkfun</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow me</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="https://www.youtube.com/channel/UCKoVZT_zDv5xBTHTU0O0QTA"><i class="fab fa-youtube"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="https://www.linkedin.com/in/pudur-venugopal-narsing/"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+<div class="footerr"><br>Copyright &copy; 2021 Venugopal Pudur . All rights reserved</div>
+  
+  </footer>
+
+
+
+    </body>
+
+
+
+
+<script>
+
+window.onload = function(){
+document.getElementById("audio").play();
+}
+</script>
+
+<script>
+
+
+var audio = document.getElementById('audio');
+var playPauseBTN = document.getElementById('playPauseBTN');
+var count = 0;
+
+function playPause(){
+	if(count == 0){
+		count = 1;
+		audio.play();
+		playPauseBTN.innerHTML = "Pause ⏸";
+	}else{
+		count = 0;
+		audio.pause();
+		playPauseBTN.innerHTML = "Play ►";
+	}
+
+}
+
+function stop(){
+	playPause()
+	audio.pause();
+	audio.currentTime = 0;
+	playPauseBTN.innerHTML = "Play ►";
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+</html>
